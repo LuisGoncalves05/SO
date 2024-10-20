@@ -1,0 +1,4 @@
+Flower, stone, Grass.
+Riffle, Sword, spear.
+Water, Stone, fire, Air.
+No sword, no riffle, no spear.
