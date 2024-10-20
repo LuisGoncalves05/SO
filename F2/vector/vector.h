@@ -1,3 +1,6 @@
+#ifndef VECTOR_H
+#define VECTOR_H
+
 /* definition of new type vector */
 
 typedef struct {
@@ -10,8 +13,10 @@ typedef struct {
 
 vector* vector_new(double, double, double);
 vector* vector_add(vector*, vector*);
-vector* vector_sub(vector*, vector*);
+vector* vector_sub(const vector*, const vector*);
 vector* vector_scale(double, vector*);
-vector* vector_vprod(vector*, vector*);
+vector* vector_vprod(const vector*, const vector*);
 double vector_sprod(vector*, vector*);
 double vector_mod(vector*);
+
+#endif

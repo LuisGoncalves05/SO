@@ -10,9 +10,9 @@ int main(int argc, char *argv[]) {
             exit(EXIT_FAILURE);
         }
 
-        char *buffer[BUFFER_SIZE];
         size_t nchars;
         do {
+            char *buffer[BUFFER_SIZE];
             nchars = fread(buffer, sizeof(char), BUFFER_SIZE, file);
             fwrite(buffer, sizeof(char), nchars, stdout);
         } while (nchars);
