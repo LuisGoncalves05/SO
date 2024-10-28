@@ -11,7 +11,7 @@ int main(const int argc, char** argv) {
 
     FILE* file = fopen(argv[2], "r");
     size_t line_buffer_size = 0;
-    ssize_t line_size;
+    size_t line_size;
     char* line = NULL;
     size_t line_num = 0;
     const char* string = argv[1];
