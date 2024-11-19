@@ -1,6 +1,6 @@
 ARCHIVES
 gcc -c -Wall PNAME_*.c
-ar -rc libPNAME.a PNAME*.o
+ar -rc libPNAME.a PNAME_*.o
 
 SHARED LIBS
 gcc -c -Wall -fPIC PNAME_*.c
