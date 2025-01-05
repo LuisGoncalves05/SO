@@ -1,0 +1,24 @@
+1.
+    int x in stack
+    pointer to int x in stack
+    g call stack comes and goes
+    safe
+
+2.
+    int x in stack
+    pointer to int x in stack
+    unsafe
+
+3.
+    int *x in heap
+    pointer to int x in stack
+    safe
+
+4.
+    g call stack comes and goes
+        function pointer h to f in stack
+        int y in stack
+        h call stack comes and goes
+            int x in stack
+            int x**x in stack
+    0 in .data

@@ -1,0 +1,1 @@
+This newer program uses more memory becauses it moves complex structs around and not pointers to those structs.

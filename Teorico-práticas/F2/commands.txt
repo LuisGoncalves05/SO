@@ -1,0 +1,14 @@
+ARCHIVES
+gcc -c -Wall PNAME_*.c
+ar -rc libPNAME.a PNAME_*.o
+
+SHARED LIBS
+gcc -c -Wall -fPIC PNAME_*.c
+gcc -shared -o libPNAME.so PNAME_*.o
+
+BOTH
+export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+gcc -Wall use_PNAME.c -o use_PNAME -L. -lPNAME
+
+MEMORY LEAKS
+valgrind --leak-check=full ./a.out
