@@ -31,6 +31,6 @@ int main (int argc, char* argv[]) {
     printf("my PID is %d\n", getpid());
     read_parameter();
     printf("waiting...");
-    for ( ; ; )
-    pause();
+    
+    for ( ; ; ) pause();
 }

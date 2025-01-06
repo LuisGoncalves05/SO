@@ -29,7 +29,6 @@ int main(int argc, char* argv[]) {
             nbytes = read(sockets[0], buf, BUFFER_SIZE);
             write(STDOUT_FILENO, buf, nbytes);
         }
-
         close(sockets[0]);
 
         retv = wait(NULL);
@@ -38,7 +37,7 @@ int main(int argc, char* argv[]) {
         close(sockets[0]);
 
         char string2[BUFFER_SIZE];
-
+        
         int nbytes;
         while ((nbytes = read(sockets[1], string2, BUFFER_SIZE))){
             int i = 0;
@@ -47,8 +46,8 @@ int main(int argc, char* argv[]) {
             }
             write(sockets[1], string2, nbytes);
         }
-
         close(sockets[1]);
-        exit(EXIT_SUCCESS);
     }
+
+    exit(EXIT_SUCCESS);
 }

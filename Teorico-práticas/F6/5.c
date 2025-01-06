@@ -6,7 +6,10 @@
 #include <unistd.h>
 
 static int flag = 1;
-static void inthandler() {printf("\nHandled it!\n"); flag = 0;}
+static void inthandler() {
+    printf("\nHandled it!\n");
+    flag = 0;
+}
 
 int main(int argc, char* argv[]) {
     printf("my PID is %d\n", getpid());

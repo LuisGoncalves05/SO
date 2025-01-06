@@ -10,11 +10,12 @@ static void handler2() { printf("caught SIGUSR2\n"); }
 static void handlerTstp() { printf("caught SIGTSTP\n"); }
 static void handlerInt() { printf("caught SIGINT\n"); }
 static void handlerHup() { printf("caught SIGHUP\n"); }
-static void handlerKill() { printf("caught SIGKILL\n"); }
+//static void handlerKill() { printf("caught SIGKILL\n"); }
 
 
 int main(int argc, char* argv[]) {
     printf("my PID is %d\n", getpid());
+    
     if (signal(SIGUSR1, handler1) == SIG_ERR) {
         fprintf(stderr, "Can't catch SIGUSR1: %s\n", strerror(errno));
         exit(EXIT_FAILURE);
@@ -35,11 +36,13 @@ int main(int argc, char* argv[]) {
         fprintf(stderr, "Can't catch SIGHUP: %s\n", strerror(errno));
         exit(EXIT_FAILURE);
     }
+    /*
     if (signal(SIGKILL, handlerKill) == SIG_ERR) {
         fprintf(stderr, "Can't catch SIGKILL: %s\n", strerror(errno));
         exit(EXIT_FAILURE);
     }
+    */
+
     /* stick around ... */
-    for ( ; ; )
-    pause();
+    for ( ; ; ) pause();
 }
